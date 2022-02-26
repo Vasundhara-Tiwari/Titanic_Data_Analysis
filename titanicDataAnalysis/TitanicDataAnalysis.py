@@ -3,6 +3,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 import math
+from sklearn.cross_validation import train_test_split
 
 dataset = pd.read_csv("tested.csv")
 print(dataset.head(10))
@@ -65,3 +66,10 @@ print(dataset.head(10))
 
 dataset.drop(["Sex", "Pclass", "Embarked", "PassengerId", "Name", "Ticket"], axis=1, inplace=True)
 print(dataset.head(5))
+
+
+##Training and testing data
+
+X=dataset.drop("Survived", axis=1)
+y=dataset["Survived"]
+
