@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
 
 dataset = pd.read_csv("tested.csv")
 print(dataset.head(10))
@@ -84,3 +85,4 @@ predictions = lgmodel.predict(X_test)
 print(classification_report(y_test, predictions))
 
 print(confusion_matrix(y_test, predictions))
+print(str(accuracy_score(y_test, predictions))+"%")
