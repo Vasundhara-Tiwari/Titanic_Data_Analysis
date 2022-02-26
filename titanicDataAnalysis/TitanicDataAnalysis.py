@@ -17,3 +17,10 @@ plt.show()
 
 sns.countplot(x="Survived", hue="Pclass", data=dataset)
 plt.show()
+
+dataset["Age"].plot.hist()
+plt.show()
+
+dataset["Fare"].plot.hist(bins=20, figsize=(10,5))
+plt.show()
+
