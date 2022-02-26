@@ -39,3 +39,15 @@ print(dataset.isnull().sum())
 sns.heatmap(dataset.isnull(), yticklabels=False, cmap="viridis")
 plt.show()
 
+sns.boxplot(x="Pclass", y="Age", data=dataset)
+plt.show()
+
+dataset.drop("Cabin", axis=1, inplace=True)
+print(dataset.head(5))
+
+dataset.dropna(inplace=True)
+sns.heatmap(dataset.isnull(), yticklabels=False, cmap="viridis")
+plt.show()
+
+print(dataset.isnull().sum())
+
