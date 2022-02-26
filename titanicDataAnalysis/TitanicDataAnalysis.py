@@ -24,3 +24,18 @@ plt.show()
 dataset["Fare"].plot.hist(bins=20, figsize=(10,5))
 plt.show()
 
+sns.countplot(x="SibSp", data=dataset)
+plt.show()
+
+sns.countplot(x="Parch", data=dataset)
+plt.show()
+
+## Performing data wrangling
+
+print(dataset.isnull())
+
+print(dataset.isnull().sum())
+
+sns.heatmap(dataset.isnull(), yticklabels=False, cmap="viridis")
+plt.show()
+
