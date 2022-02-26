@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt
 import math
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
 
 dataset = pd.read_csv("tested.csv")
 print(dataset.head(10))
@@ -77,3 +78,9 @@ y=dataset["Survived"]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
 lgmodel = LogisticRegression()
+lgmodel.fit(X_train, y_train)
+
+predictions = lgmodel.predict(X_test)
+print(classification_report(y_test, predictions))
+
+print(confusion_matrix(y_test, predictions))
