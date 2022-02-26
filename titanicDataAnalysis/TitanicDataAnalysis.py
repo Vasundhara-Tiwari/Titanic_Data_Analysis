@@ -11,3 +11,9 @@ print("number of passengers in original data:" + str(len(dataset.index)))
 
 sns.countplot(x="Survived", data=dataset)
 plt.show()
+
+sns.countplot(x="Survived", hue="Sex", data=dataset)
+plt.show()
+
+sns.countplot(x="Survived", hue="Pclass", data=dataset)
+plt.show()
