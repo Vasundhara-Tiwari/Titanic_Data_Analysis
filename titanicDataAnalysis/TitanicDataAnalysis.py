@@ -51,3 +51,17 @@ plt.show()
 
 print(dataset.isnull().sum())
 
+sex = pd.get_dummies(dataset["Sex"], drop_first=True)
+print(sex.head(5))
+
+embark = sex = pd.get_dummies(dataset["Embarked"], drop_first=True)
+print(embark.head(5))
+
+pcl = sex = pd.get_dummies(dataset["Pclass"], drop_first=True)
+print(pcl.head(5))
+
+dataset = pd.concat([dataset, sex, embark, pcl], axis=1)
+print(dataset.head(10))
+
+dataset.drop(["Sex", "Pclass", "Embarked", "PassengerId", "Name", "Ticket"], axis=1, inplace=True)
+print(dataset.head(5))
