@@ -7,6 +7,7 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 
+# importing data fom csv file
 dataset = pd.read_csv("tested.csv")
 print(dataset.head(10))
 
