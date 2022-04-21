@@ -11,6 +11,7 @@ from sklearn.metrics import accuracy_score
 dataset = pd.read_csv("tested.csv")
 print(dataset.head(10))
 
+#printing length of dataset
 print("number of passengers in original data:" + str(len(dataset.index)))
 
 sns.countplot(x="Survived", data=dataset)
