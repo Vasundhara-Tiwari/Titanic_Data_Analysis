@@ -41,6 +41,7 @@ print(dataset.isnull())
 
 print(dataset.isnull().sum())
 
+# heatmap of the dataset
 sns.heatmap(dataset.isnull(), yticklabels=False, cmap="viridis")
 plt.show()
 
