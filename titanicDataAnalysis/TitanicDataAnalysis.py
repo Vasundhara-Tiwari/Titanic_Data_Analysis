@@ -55,6 +55,7 @@ dataset.dropna(inplace=True)
 sns.heatmap(dataset.isnull(), yticklabels=False, cmap="viridis")
 plt.show()
 
+# printing null values
 print(dataset.isnull().sum())
 
 sex = pd.get_dummies(dataset["Sex"], drop_first=True)
